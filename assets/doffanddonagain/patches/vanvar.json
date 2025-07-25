@@ -1,0 +1,77 @@
+[
+  // For compatibility with the additional armor stands
+  // from Vanilla Variants (vanvar)
+  //
+  // The following patches are going to look strange
+  // because worldConfigs (worldattributes) added by
+  // mods inside of worldconfig.json are not present in the
+  // game's worldconfig at time of patching unless the user
+  // has clicked 'Apply' on the Customize screen.
+  // 
+  // Therefore, these patches are written in such a way that
+  // if no worldconfigs for the mod existed, the final result
+  // of the patching correlates with the default settings.
+  {
+    "op": "add",
+    "path": "/doffanddonTEMP",
+    "value": {
+      "code": "doffanddonnable",
+      "targetWearableInventoryBehaviorCode": "armorstandinventory",
+      "armorSlotIds": [ 12, 13, 14 ],
+      "clothingSlotIds": [],
+      "miscDonFromSlotIds": [ 16, 15 ]
+    },
+    "file": "vanvar:entities/wood/armorstand*",
+    "dependsOn": [
+      { "modid": "vanvar" }
+    ]
+  },
+
+
+  {
+    "op": "replace",
+    "path": "/doffanddonTEMP/armorSlotIds",
+    "value": [],
+    "file": "vanvar:entities/wood/armorstand*",
+    "dependsOn": [
+      { "modid": "vanvar" }
+    ],
+    "condition": {
+      "when": "doffanddonagainAllowArmorStandArmor",
+      "isValue": "false"
+    }
+  },
+  {
+    "op": "replace",
+    "path": "/doffanddonTEMP/miscDonFromSlotIds",
+    "value": [],
+    "file": "vanvar:entities/wood/armorstand*",
+    "dependsOn": [
+      { "modid": "vanvar" }
+    ],
+    "condition": {
+      "when": "doffanddonagainAllowArmorStandHands",
+      "isValue": "false"
+    }
+  },
+
+
+  {
+    "op": "copy",
+    "fromPath": "/doffanddonTEMP",
+    "path": "/client/behaviors/-",
+    "file": "vanvar:entities/wood/armorstand*",
+    "dependsOn": [
+      { "modid": "vanvar" }
+    ]
+  },
+  {
+    "op": "move",
+    "fromPath": "/doffanddonTEMP",
+    "path": "/server/behaviors/-",
+    "file": "vanvar:entities/wood/armorstand*",
+    "dependsOn": [
+      { "modid": "vanvar" }
+    ]
+  }
+]
