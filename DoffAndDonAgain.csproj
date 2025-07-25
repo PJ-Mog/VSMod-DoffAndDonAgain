@@ -1,59 +1,50 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <TargetGameVersion>1.19</TargetGameVersion>
-    <EnvironmentStyle>Rice</EnvironmentStyle>
-    <!-- <EnvironmentStyle>Copygirl</EnvironmentStyle> -->
-    <VSPath Condition="'$(EnvironmentStyle)' == 'Copygirl'">$(VINTAGE_STORY)</VSPath>
-    <VSPath Condition="'$(EnvironmentStyle)' == 'Rice'">$(VINTAGE_STORY_DEV)/$(TargetGameVersion)</VSPath>
+    <TargetFramework>net8.0</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin\$(Configuration)\Mods\mod</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="VintagestoryAPI">
-      <HintPath>$(VSPath)/VintagestoryAPI.dll</HintPath>
+      <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>$(VSPath)/Mods/VSEssentials.dll</HintPath>
+      <HintPath>$(VINTAGE_STORY)/Mods/VSEssentials.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>$(VSPath)/Mods/VSSurvivalMod.dll</HintPath>
+      <HintPath>$(VINTAGE_STORY)/Mods/VSSurvivalMod.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <!-- <Reference Include="Harmony">
-      <HintPath>$(VSPath)/Lib/0Harmony.dll</HintPath>
+      <HintPath>$(VINTAGE_STORY)/Lib/0Harmony.dll</HintPath>
       <Private>false</Private>
     </Reference> -->
     <Reference Include="Newtonsoft">
-      <HintPath>$(VSPath)/Lib/Newtonsoft.Json.dll</HintPath>
+      <HintPath>$(VINTAGE_STORY)/Lib/Newtonsoft.Json.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="ProtoBuf">
-      <HintPath>$(VSPath)/Lib/protobuf-net.dll</HintPath>
+      <HintPath>$(VINTAGE_STORY)/Lib/protobuf-net.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
 
-  <ItemGroup Condition="'$(Configuration)' == 'Release'">
-    <None Include="resources/**">
-      <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+  <ItemGroup>
+    <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
-    <None Include="resources/**">
-      <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Content>
+    <Content Include="modicon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
+    <Content Include="worldconfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets/**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
-
-  <Target Name="PackageRelease" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Release'">
-    <ZipDirectory DestinationFile="bin/RELEASE/$(TargetName)_for_$(TargetGameVersion).rc.zip" SourceDirectory="$(TargetDir)" Overwrite="false" />
-  </Target>
-
-  <Target Name="Package" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Debug'">
-    <ZipDirectory DestinationFile="bin/Debug/zip/DEBUG_$(TargetName).zip" SourceDirectory="$(TargetDir)" Overwrite="true" />
-  </Target>
 </Project>
