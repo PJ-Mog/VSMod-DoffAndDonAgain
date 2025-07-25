@@ -6,6 +6,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.Server;
+using Vintagestory.GameContent;
 
 namespace DoffAndDonAgain {
   public class EntityBehaviorDoffAndDonnable : EntityBehavior {
@@ -57,7 +58,7 @@ namespace DoffAndDonAgain {
     }
 
     private void InitializeInventory() {
-      var entityInventory = (entity as EntityAgent)?.GearInventory;
+      var entityInventory = entity?.GetBehavior<EntityBehaviorTexturedClothing>()?.Inventory;
       if (entityInventory == null) {
         return;
       }
