@@ -14,6 +14,7 @@ namespace DoffAndDonAgain {
     protected int[] armorSlotIds;
     protected int[] clothingSlotIds;
     protected int[] miscDonFromSlotIds;
+    protected string targetWearableInventoryBehaviorCode;
 
     public List<ItemSlot> ArmorSlots = new List<ItemSlot>(0);
     public List<ItemSlot> ClothingSlots = new List<ItemSlot>(0);
@@ -21,12 +22,13 @@ namespace DoffAndDonAgain {
 
     public EntityBehaviorDoffAndDonnable(Entity entity) : base(entity) { }
 
-    public override string PropertyName() => EntityBehaviorDoffAndDonnable.Name;
+    public override string PropertyName() => Name;
 
     public override void Initialize(EntityProperties properties, JsonObject attributes) {
       base.Initialize(properties, attributes);
 
       try {
+        targetWearableInventoryBehaviorCode = attributes[nameof(targetWearableInventoryBehaviorCode)].AsString("");
         armorSlotIds = attributes[nameof(armorSlotIds)].AsArray<int>(new int[0]);
         clothingSlotIds = attributes[nameof(clothingSlotIds)].AsArray<int>(new int[0]);
         miscDonFromSlotIds = attributes[nameof(miscDonFromSlotIds)].AsArray<int>(new int[0]);
@@ -58,7 +60,7 @@ namespace DoffAndDonAgain {
     }
 
     private void InitializeInventory() {
-      var entityInventory = entity?.GetBehavior<EntityBehaviorTexturedClothing>()?.Inventory;
+      var entityInventory = (entity?.GetBehavior(targetWearableInventoryBehaviorCode) as EntityBehaviorContainer)?.Inventory;
       if (entityInventory == null) {
         return;
       }

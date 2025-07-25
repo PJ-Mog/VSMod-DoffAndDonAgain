@@ -13,8 +13,9 @@
     "path": "/doffanddonTEMP",
     "value": {
       "code": "doffanddonnable",
+      "targetWearableInventoryBehaviorCode": "armorstandinventory",
       "armorSlotIds": [ 12, 13, 14 ],
-      "clothingSlotIds": [ ],
+      "clothingSlotIds": [],
       "miscDonFromSlotIds": [ 16, 15 ]
     },
     "file": "game:entities/nonliving/armorstand*"
