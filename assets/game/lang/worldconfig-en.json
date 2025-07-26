@@ -6,6 +6,7 @@
   "worldattribute-doffanddonagainAllowArmorStandHands-desc": "On: Allow interaction with items placed into the hands of vanilla Armor Stands.\r\nOff: Doff and Don Again actions will ignore items in the hands of Armor Stands.",
   "worldattribute-doffanddonagainSaturationCost": "Amount of Saturation consumed per action",
   "worldattribute-doffanddonagainHandsNeeded": "Empty hands needed to perform an action",
+  "worldattribute-doffanddonagainHandsNeeded-unit": "{0} empty hand(s)",
 
   "worldconfig-category-doffanddonagainMannequins": "Doff and Don Again\r\n - Other Mods",
   "worldattribute-doffanddonagainAllowMannequinArmor": "Interact with armor on Mannequins",

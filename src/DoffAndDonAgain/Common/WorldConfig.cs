@@ -4,62 +4,61 @@ namespace DoffAndDonAgain.Common {
   public static class WorldConfig {
     // GENERAL
     public const string WorldConfigCategoryGeneral = Constants.MOD_ID + "General";
-    public static readonly WorldConfigurationAttribute AllowArmorStandArmor = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute AllowArmorStandArmor = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryGeneral,
       Code = Constants.MOD_ID + nameof(AllowArmorStandArmor),
       Default = true.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute AllowArmorStandHands = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute AllowArmorStandHands = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryGeneral,
       Code = Constants.MOD_ID + nameof(AllowArmorStandHands),
       Default = true.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute SaturationCost = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute SaturationCost = new() {
       DataType = EnumDataType.IntInput,
       Category = WorldConfigCategoryGeneral,
       Code = Constants.MOD_ID + nameof(SaturationCost),
-      Default = 0.ToString(),
-      OnCustomizeScreen = false
+      Default = 0.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute HandsNeeded = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute HandsNeeded = new() {
       DataType = EnumDataType.IntRange,
       Category = WorldConfigCategoryGeneral,
       Code = Constants.MOD_ID + nameof(HandsNeeded),
       Default = 2.ToString(),
       Min = 0,
       Max = 2,
-      OnCustomizeScreen = false
+      Step = 1
     };
 
     // MANNEQUINS
     public const string WorldConfigCategoryMannequins = Constants.MOD_ID + "Mannequins";
-    public static readonly WorldConfigurationAttribute AllowMannequinArmor = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute AllowMannequinArmor = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryMannequins,
       Code = Constants.MOD_ID + nameof(AllowMannequinArmor),
       Default = false.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute AllowMannequinClothing = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute AllowMannequinClothing = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryMannequins,
       Code = Constants.MOD_ID + nameof(AllowMannequinClothing),
       Default = true.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute AllowMannequinHands = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute AllowMannequinHands = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryMannequins,
       Code = Constants.MOD_ID + nameof(AllowMannequinHands),
       Default = false.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute AllowMannequinBackpack = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute AllowMannequinBackpack = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryMannequins,
       Code = Constants.MOD_ID + nameof(AllowMannequinBackpack),
@@ -68,42 +67,42 @@ namespace DoffAndDonAgain.Common {
 
     // DOFF
     public const string WorldConfigCategoryDoff = Constants.MOD_ID + "Doff";
-    public static readonly WorldConfigurationAttribute DoffArmorToEntities = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute DoffArmorToEntities = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryDoff,
       Code = Constants.MOD_ID + nameof(DoffArmorToEntities),
       Default = true.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute DoffArmorToGround = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute DoffArmorToGround = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryDoff,
       Code = Constants.MOD_ID + nameof(DoffArmorToGround),
       Default = true.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute DropUnplaceableArmor = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute DropUnplaceableArmor = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryDoff,
       Code = Constants.MOD_ID + nameof(DropUnplaceableArmor),
       Default = false.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute DoffClothingToEntities = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute DoffClothingToEntities = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryDoff,
       Code = Constants.MOD_ID + nameof(DoffClothingToEntities),
       Default = true.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute DoffClothingToGround = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute DoffClothingToGround = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryDoff,
       Code = Constants.MOD_ID + nameof(DoffClothingToGround),
       Default = false.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute DropUnplaceableClothing = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute DropUnplaceableClothing = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryDoff,
       Code = Constants.MOD_ID + nameof(DropUnplaceableClothing),
@@ -112,21 +111,21 @@ namespace DoffAndDonAgain.Common {
 
     // DON
     public const string WorldConfigCategoryDon = Constants.MOD_ID + "Don";
-    public static readonly WorldConfigurationAttribute DonArmorFromEntities = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute DonArmorFromEntities = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryDon,
       Code = Constants.MOD_ID + nameof(DonArmorFromEntities),
       Default = true.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute DonClothingFromEntities = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute DonClothingFromEntities = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryDon,
       Code = Constants.MOD_ID + nameof(DonClothingFromEntities),
       Default = true.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute DonMiscFromEntities = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute DonMiscFromEntities = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategoryDon,
       Code = Constants.MOD_ID + nameof(DonMiscFromEntities),
@@ -134,14 +133,14 @@ namespace DoffAndDonAgain.Common {
     };
 
     public const string WorldConfigCategorySwap = Constants.MOD_ID + "Swap";
-    public static readonly WorldConfigurationAttribute SwapArmorWithEntities = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute SwapArmorWithEntities = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategorySwap,
       Code = Constants.MOD_ID + nameof(SwapArmorWithEntities),
       Default = true.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute SwapClothingWithEntities = new WorldConfigurationAttribute {
+    public static readonly WorldConfigurationAttribute SwapClothingWithEntities = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategorySwap,
       Code = Constants.MOD_ID + nameof(SwapClothingWithEntities),

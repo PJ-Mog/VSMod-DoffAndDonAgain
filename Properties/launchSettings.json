@@ -1,6 +1,9 @@
 {
   "profiles": {
     "Client": {
+      "environmentVariables": {
+        "WORLDCONFIG": "$(ProjectDir)/worldconfig.json"
+      },
       "commandName": "Executable",
       "executablePath": "$(VINTAGE_STORY)/Vintagestory.exe",
       "commandLineArgs": "--tracelog --addModPath \"$(ProjectDir)/bin/$(Configuration)/Mods\"",
