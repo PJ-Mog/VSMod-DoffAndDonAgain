@@ -3,7 +3,6 @@
 using System;
 using DoffAndDonAgain.Common;
 using Newtonsoft.Json;
-using RiceConfig.Extensions;
 using Vintagestory.API.Common;
 
 namespace DoffAndDonAgain.Build {
@@ -12,7 +11,6 @@ namespace DoffAndDonAgain.Build {
     public override void Start(ICoreAPI api) {
       base.Start(api);
       var filenameAndPath = Environment.GetEnvironmentVariable("WORLDCONFIG");
-      api.Logger.ModDebug(filenameAndPath);
       if (filenameAndPath != null) {
         api.StoreModConfig(new WorldConfigFile(), filenameAndPath);
       }
@@ -20,20 +18,16 @@ namespace DoffAndDonAgain.Build {
 
     private class WorldConfigFile {
       [JsonProperty]
-      private readonly PlayStyle[] PlayStyles = new PlayStyle[0];
+      private readonly PlayStyle[] PlayStyles = [];
 
       [JsonProperty]
-      private readonly WorldConfigurationAttribute[] WorldConfigAttributes = new[] {
+      private readonly WorldConfigurationAttribute[] WorldConfigAttributes = [
         WorldConfig.AllowArmorStandArmor,
         WorldConfig.AllowArmorStandHands,
         WorldConfig.SaturationCost,
         WorldConfig.HandsNeeded,
 
-        WorldConfig.AllowMannequinArmor,
-        WorldConfig.AllowMannequinClothing,
-        WorldConfig.AllowMannequinHands,
-        WorldConfig.AllowMannequinBackpack,
-
+        //WorldConfig.DoffSpacer,
         WorldConfig.DoffArmorToGround,
         WorldConfig.DoffArmorToEntities,
         WorldConfig.DropUnplaceableArmor,
@@ -41,13 +35,21 @@ namespace DoffAndDonAgain.Build {
         WorldConfig.DoffClothingToEntities,
         WorldConfig.DropUnplaceableClothing,
 
+        //WorldConfig.DonSpacer,
         WorldConfig.DonArmorFromEntities,
         WorldConfig.DonClothingFromEntities,
         WorldConfig.DonMiscFromEntities,
 
+        //WorldConfig.SwapSpacer,
         WorldConfig.SwapArmorWithEntities,
-        WorldConfig.SwapClothingWithEntities
-      };
+        WorldConfig.SwapClothingWithEntities,
+
+        //WorldConfig.MannequinSpacer,
+        WorldConfig.AllowMannequinArmor,
+        WorldConfig.AllowMannequinClothing,
+        WorldConfig.AllowMannequinHands,
+        WorldConfig.AllowMannequinBackpack
+      ];
     }
   }
 }
