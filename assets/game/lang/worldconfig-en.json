@@ -1,15 +1,11 @@
 {
   "worldconfig-category-doffanddonagain": "Doff and Don Again",
   "worldattribute-doffanddonagainAllowArmorStands": "Allow interaction with Armor Stands",
+  "worldattribute-doffanddonagainAllowMannequins": "Allow interaction with Mannequins",
+  "worldattribute-doffanddonagainAllowMannequins-desc": "For mannequins from the Mannequin mod by MisterAndyDandy",
   "worldattribute-doffanddonagainSaturationCost": "Amount of Satiety consumed per action",
   "worldattribute-doffanddonagainHandsNeeded": "Empty hands needed to perform an action",
   "worldattribute-doffanddonagainHandsNeeded-unit": "{0} empty hand(s)",
-
-  "worldattribute-doffanddonagainDoffSpacer": "--- Doff Settings ---",
   "worldattribute-doffanddonagainAllowDoffToGround": "Allow Doffing to the ground",
-  "worldattribute-doffanddonagainAllowDoffToGround-desc": "On: Based on a player's chosen settings, equipped items may be thrown to the ground when using Doff.\r\n\nOff: Regardless of a player's chosen settings, Doff will never throw items onto the ground.",
-
-  "worldattribute-doffanddonagainMannequinSpacer": "--- Mannequin Settings ---",
-  "worldattribute-doffanddonagainAllowMannequins": "Allow interaction with Mannequins",
-  "worldattribute-doffanddonagainAllowMannequins-desc": "For mannequins from the Mannequin mod by MisterAndyDandy"
+  "worldattribute-doffanddonagainAllowDoffToGround-desc": "On: Based on a player's chosen settings, equipped items may be thrown to the ground when using Doff.\r\n\nOff: Regardless of a player's chosen settings, Doff will never throw items onto the ground."
 }

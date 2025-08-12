@@ -23,14 +23,12 @@ namespace DoffAndDonAgain.Build {
       [JsonProperty]
       private readonly WorldConfigurationAttribute[] WorldConfigAttributes = [
         WorldConfig.AllowArmorStands,
+        WorldConfig.AllowMannequins,
         WorldConfig.SaturationCost,
         WorldConfig.HandsNeeded,
 
         //WorldConfig.DoffSpacer,
-        WorldConfig.AllowDoffToGround,
-
-        //WorldConfig.MannequinSpacer,
-        WorldConfig.AllowMannequins
+        WorldConfig.AllowDoffToGround
       ];
     }
   }

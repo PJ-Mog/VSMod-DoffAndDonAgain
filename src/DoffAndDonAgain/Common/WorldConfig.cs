@@ -11,6 +11,13 @@ namespace DoffAndDonAgain.Common {
       Default = true.ToString()
     };
 
+    public static readonly WorldConfigurationAttribute AllowMannequins = new() {
+      DataType = EnumDataType.Bool,
+      Category = WorldConfigCategory,
+      Code = Constants.MOD_ID + nameof(AllowMannequins),
+      Default = true.ToString()
+    };
+
     public static readonly WorldConfigurationAttribute SaturationCost = new() {
       DataType = EnumDataType.IntInput,
       Category = WorldConfigCategory,
@@ -26,14 +33,6 @@ namespace DoffAndDonAgain.Common {
       Min = 0,
       Max = 2,
       Step = 1
-    };
-
-    // MANNEQUINS
-    public static readonly WorldConfigurationAttribute AllowMannequins = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(AllowMannequins),
-      Default = true.ToString()
     };
 
     // DOFF
