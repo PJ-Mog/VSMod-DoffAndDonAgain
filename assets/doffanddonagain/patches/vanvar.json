@@ -26,8 +26,6 @@
       { "modid": "vanvar" }
     ]
   },
-
-
   {
     "op": "replace",
     "path": "/doffanddonTEMP/armorSlotIds",
@@ -37,7 +35,20 @@
       { "modid": "vanvar" }
     ],
     "condition": {
-      "when": "doffanddonagainAllowArmorStandArmor",
+      "when": "doffanddonagainAllowArmorStands",
+      "isValue": "false"
+    }
+  },
+  {
+    "op": "replace",
+    "path": "/doffanddonTEMP/clothingSlotIds",
+    "value": [],
+    "file": "vanvar:entities/wood/armorstand*",
+    "dependsOn": [
+      { "modid": "vanvar" }
+    ],
+    "condition": {
+      "when": "doffanddonagainAllowArmorStands",
       "isValue": "false"
     }
   },
@@ -50,7 +61,7 @@
       { "modid": "vanvar" }
     ],
     "condition": {
-      "when": "doffanddonagainAllowArmorStandHands",
+      "when": "doffanddonagainAllowArmorStands",
       "isValue": "false"
     }
   },

@@ -4,17 +4,10 @@ namespace DoffAndDonAgain.Common {
   public static class WorldConfig {
     // GENERAL
     public const string WorldConfigCategory = Constants.MOD_ID;
-    public static readonly WorldConfigurationAttribute AllowArmorStandArmor = new() {
+    public static readonly WorldConfigurationAttribute AllowArmorStands = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(AllowArmorStandArmor),
-      Default = true.ToString()
-    };
-
-    public static readonly WorldConfigurationAttribute AllowArmorStandHands = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(AllowArmorStandHands),
+      Code = Constants.MOD_ID + nameof(AllowArmorStands),
       Default = true.ToString()
     };
 
@@ -142,46 +135,6 @@ namespace DoffAndDonAgain.Common {
       Code = Constants.MOD_ID + nameof(SwapClothingWithEntities),
       Default = true.ToString()
     };
-
-    public static readonly WorldConfigurationAttribute DoffSpacer = new() {
-      DataType = EnumDataType.StringRange,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(DoffSpacer),
-      Default = "--- Doff Settings ---",
-      Values = ["--- Doff Settings ---"],
-      Names = ["Spacer"],
-      OnlyDuringWorldCreate = true
-    };
-
-    public static readonly WorldConfigurationAttribute DonSpacer = new() {
-      DataType = EnumDataType.StringRange,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(DonSpacer),
-      Default = "--- Don Settings ---",
-      Values = ["--- Don Settings ---"],
-      Names = ["Spacer"],
-      OnlyDuringWorldCreate = true
-    };
-
-    public static readonly WorldConfigurationAttribute SwapSpacer = new() {
-      DataType = EnumDataType.StringRange,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(SwapSpacer),
-      Default = "--- Swap Settings ---",
-      Values = ["--- Swap Settings ---"],
-      Names = ["Spacer"],
-      OnlyDuringWorldCreate = true
-    };
-
-    public static readonly WorldConfigurationAttribute MannequinSpacer = new() {
-      DataType = EnumDataType.StringRange,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(MannequinSpacer),
-      Default = "--- Mannequin Settings ---",
-      Values = ["--- Mannequin Settings ---"],
-      Names = ["Spacer"],
-      OnlyDuringWorldCreate = true
-    };
   }
 
   public static class WorldConfigExtensions {
@@ -191,7 +144,7 @@ namespace DoffAndDonAgain.Common {
           return api.World.Config.GetBool(attribute.Code, (bool)attribute.TypedDefault);
         default:
           LogError(attribute, api, typeof(bool));
-          return default(bool);
+          return default;
       }
     }
 
@@ -202,7 +155,7 @@ namespace DoffAndDonAgain.Common {
           return api.World.Config.GetInt(attribute.Code, (int)attribute.TypedDefault);
         default:
           LogError(attribute, api, typeof(int));
-          return default(int);
+          return default;
       }
     }
 
@@ -212,7 +165,7 @@ namespace DoffAndDonAgain.Common {
           return api.World.Config.GetDecimal(attribute.Code, (float)attribute.TypedDefault);
         default:
           LogError(attribute, api, typeof(double));
-          return default(double);
+          return default;
       }
     }
 
@@ -227,7 +180,7 @@ namespace DoffAndDonAgain.Common {
           return api.World.Config.GetString(attribute.Code, (string)attribute.TypedDefault);
         default:
           LogError(attribute, api, typeof(string));
-          return default(string);
+          return default;
       }
     }
 

@@ -20,15 +20,23 @@
     },
     "file": "game:entities/nonliving/armorstand*"
   },
-
-
   {
     "op": "replace",
     "path": "/doffanddonTEMP/armorSlotIds",
     "value": [],
     "file": "game:entities/nonliving/armorstand*",
     "condition": {
-      "when": "doffanddonagainAllowArmorStandArmor",
+      "when": "doffanddonagainAllowArmorStands",
+      "isValue": "false"
+    }
+  },
+  {
+    "op": "replace",
+    "path": "/doffanddonTEMP/clothingSlotIds",
+    "value": [],
+    "file": "game:entities/nonliving/armorstand*",
+    "condition": {
+      "when": "doffanddonagainAllowArmorStands",
       "isValue": "false"
     }
   },
@@ -38,11 +46,10 @@
     "value": [],
     "file": "game:entities/nonliving/armorstand*",
     "condition": {
-      "when": "doffanddonagainAllowArmorStandHands",
+      "when": "doffanddonagainAllowArmorStands",
       "isValue": "false"
     }
   },
-
 
   {
     "op": "copy",

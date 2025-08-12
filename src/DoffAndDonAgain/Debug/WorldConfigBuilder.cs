@@ -22,8 +22,7 @@ namespace DoffAndDonAgain.Build {
 
       [JsonProperty]
       private readonly WorldConfigurationAttribute[] WorldConfigAttributes = [
-        WorldConfig.AllowArmorStandArmor,
-        WorldConfig.AllowArmorStandHands,
+        WorldConfig.AllowArmorStands,
         WorldConfig.SaturationCost,
         WorldConfig.HandsNeeded,
 

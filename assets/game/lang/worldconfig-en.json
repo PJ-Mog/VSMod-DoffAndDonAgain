@@ -1,9 +1,6 @@
 {
   "worldconfig-category-doffanddonagain": "Doff and Don Again",
-  "worldattribute-doffanddonagainAllowArmorStandArmor": "Interact with armor on Armor Stands",
-  "worldattribute-doffanddonagainAllowArmorStandArmor-desc": "On: Allow interaction with the armor placed on vanilla Armor Stands.\r\n\nOff: Doff and Don Again actions will ignore armor on Armor Stands.",
-  "worldattribute-doffanddonagainAllowArmorStandHands": "Interact with hands of Armor Stands",
-  "worldattribute-doffanddonagainAllowArmorStandHands-desc": "On: Allow interaction with items placed into the hands of vanilla Armor Stands.\r\n\nOff: Doff and Don Again actions will ignore items in the hands of Armor Stands.",
+  "worldattribute-doffanddonagainAllowArmorStands": "Allow interaction with Armor Stands",
   "worldattribute-doffanddonagainSaturationCost": "Amount of Satiety consumed per action",
   "worldattribute-doffanddonagainHandsNeeded": "Empty hands needed to perform an action",
   "worldattribute-doffanddonagainHandsNeeded-unit": "{0} empty hand(s)",
