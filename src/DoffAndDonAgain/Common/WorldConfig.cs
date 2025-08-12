@@ -37,13 +37,6 @@ namespace DoffAndDonAgain.Common {
     };
 
     // DOFF
-    public static readonly WorldConfigurationAttribute DoffArmorToEntities = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(DoffArmorToEntities),
-      Default = true.ToString()
-    };
-
     public static readonly WorldConfigurationAttribute DoffArmorToGround = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategory,
@@ -58,13 +51,6 @@ namespace DoffAndDonAgain.Common {
       Default = false.ToString()
     };
 
-    public static readonly WorldConfigurationAttribute DoffClothingToEntities = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(DoffClothingToEntities),
-      Default = true.ToString()
-    };
-
     public static readonly WorldConfigurationAttribute DoffClothingToGround = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategory,
@@ -77,42 +63,6 @@ namespace DoffAndDonAgain.Common {
       Category = WorldConfigCategory,
       Code = Constants.MOD_ID + nameof(DropUnplaceableClothing),
       Default = false.ToString()
-    };
-
-    // DON
-    public static readonly WorldConfigurationAttribute DonArmorFromEntities = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(DonArmorFromEntities),
-      Default = true.ToString()
-    };
-
-    public static readonly WorldConfigurationAttribute DonClothingFromEntities = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(DonClothingFromEntities),
-      Default = true.ToString()
-    };
-
-    public static readonly WorldConfigurationAttribute DonMiscFromEntities = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(DonMiscFromEntities),
-      Default = true.ToString()
-    };
-
-    public static readonly WorldConfigurationAttribute SwapArmorWithEntities = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(SwapArmorWithEntities),
-      Default = true.ToString()
-    };
-
-    public static readonly WorldConfigurationAttribute SwapClothingWithEntities = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(SwapClothingWithEntities),
-      Default = true.ToString()
     };
   }
 

@@ -28,20 +28,9 @@ namespace DoffAndDonAgain.Build {
 
         //WorldConfig.DoffSpacer,
         WorldConfig.DoffArmorToGround,
-        WorldConfig.DoffArmorToEntities,
         WorldConfig.DropUnplaceableArmor,
         WorldConfig.DoffClothingToGround,
-        WorldConfig.DoffClothingToEntities,
         WorldConfig.DropUnplaceableClothing,
-
-        //WorldConfig.DonSpacer,
-        WorldConfig.DonArmorFromEntities,
-        WorldConfig.DonClothingFromEntities,
-        WorldConfig.DonMiscFromEntities,
-
-        //WorldConfig.SwapSpacer,
-        WorldConfig.SwapArmorWithEntities,
-        WorldConfig.SwapClothingWithEntities,
 
         //WorldConfig.MannequinSpacer,
         WorldConfig.AllowMannequins

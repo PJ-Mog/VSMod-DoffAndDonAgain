@@ -74,16 +74,16 @@ namespace DoffAndDonAgain.Client {
       ShouldDoffClothingToGround = WorldConfig.DoffClothingToGround.AsBool(api) && clientSettings.DoffClothingToGround.Value;
       IsDoffToGroundEnabled = ShouldDoffArmorToGround || ShouldDoffClothingToGround;
 
-      ShouldDoffArmorToEntities = WorldConfig.DoffArmorToEntities.AsBool(api) && clientSettings.DoffArmorToEntities.Value;
-      ShouldDoffClothingToEntities = WorldConfig.DoffClothingToEntities.AsBool(api) && clientSettings.DoffClothingToEntities.Value;
+      ShouldDoffArmorToEntities = clientSettings.DoffArmorToEntities.Value;
+      ShouldDoffClothingToEntities = clientSettings.DoffClothingToEntities.Value;
       IsDoffToEntityEnabled = ShouldDoffArmorToEntities || ShouldDoffClothingToEntities;
 
       ShouldDropUnplaceableArmor = clientSettings.DropUnplaceableArmor.Value;
       ShouldDropUnplaceableClothing = clientSettings.DropUnplaceableClothing.Value;
 
-      ShouldDonArmor = WorldConfig.DonArmorFromEntities.AsBool(api) && clientSettings.DonArmorFromEntities.Value;
-      ShouldDonClothing = WorldConfig.DonClothingFromEntities.AsBool(api) && clientSettings.DonClothingFromEntities.Value;
-      ShouldDonMisc = WorldConfig.DonMiscFromEntities.AsBool(api) && clientSettings.DonMiscFromEntities.Value;
+      ShouldDonArmor = clientSettings.DonArmorFromEntities.Value;
+      ShouldDonClothing = clientSettings.DonClothingFromEntities.Value;
+      ShouldDonMisc = clientSettings.DonMiscFromEntities.Value;
       IsDonEnabled = ShouldDonArmor || ShouldDonClothing || ShouldDonMisc;
 
       if (clientSettings.DonMiscOnlyToActiveHotbar.Value) {
@@ -96,8 +96,8 @@ namespace DoffAndDonAgain.Client {
         DonMiscBehavior = EnumDonMiscBehavior.Anywhere;
       }
 
-      ShouldSwapArmor = WorldConfig.SwapArmorWithEntities.AsBool(api) && clientSettings.SwapArmorWithEntities.Value;
-      ShouldSwapClothing = WorldConfig.SwapClothingWithEntities.AsBool(api) && clientSettings.SwapClothingWithEntities.Value;
+      ShouldSwapArmor = clientSettings.SwapArmorWithEntities.Value;
+      ShouldSwapClothing = clientSettings.SwapClothingWithEntities.Value;
       IsSwapEnabled = ShouldSwapArmor || ShouldSwapClothing;
     }
 

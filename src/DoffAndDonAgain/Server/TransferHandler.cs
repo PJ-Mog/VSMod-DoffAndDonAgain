@@ -10,20 +10,8 @@ namespace DoffAndDonAgain.Server {
     protected bool CanDoffClothingToGround => WorldConfig.DoffClothingToGround.AsBool(Api);
     protected bool IsDoffToGroundEnabled => CanDoffArmorToGround || CanDoffClothingToGround;
 
-    protected bool CanDoffArmorToEntities => WorldConfig.DoffArmorToEntities.AsBool(Api);
-    protected bool CanDoffClothingToEntities => WorldConfig.DoffClothingToEntities.AsBool(Api);
-    protected bool IsDoffToEntitiesEnabled => CanDoffArmorToEntities || CanDoffClothingToEntities;
     protected bool CanDropUnplaceableArmor => WorldConfig.DropUnplaceableArmor.AsBool(Api);
     protected bool CanDropUnplaceableClothing => WorldConfig.DropUnplaceableClothing.AsBool(Api);
-
-    protected bool CanDonArmorFromEntities => WorldConfig.DonArmorFromEntities.AsBool(Api);
-    protected bool CanDonClothingFromEntities => WorldConfig.DonClothingFromEntities.AsBool(Api);
-    protected bool CanDonMiscFromEntities => WorldConfig.DonMiscFromEntities.AsBool(Api);
-    protected bool IsDonFromEntitiesEnabled => CanDonArmorFromEntities || CanDonClothingFromEntities || CanDonMiscFromEntities;
-
-    protected bool CanSwapArmorWithEntities => WorldConfig.SwapArmorWithEntities.AsBool(Api);
-    protected bool CanSwapClothingWithEntities => WorldConfig.SwapClothingWithEntities.AsBool(Api);
-    protected bool IsSwapWithEntitiesEnabled => CanSwapArmorWithEntities || CanSwapClothingWithEntities;
 
     protected int HandsNeeded => WorldConfig.HandsNeeded.AsInt(Api);
     protected int SaturationRequired => System.Math.Abs(WorldConfig.SaturationCost.AsInt(Api));
@@ -79,12 +67,6 @@ namespace DoffAndDonAgain.Server {
     }
 
     protected void TryDoffToEntity(DoffAndDonEventArgs eventArgs) {
-      if (!IsDoffToEntitiesEnabled) {
-        eventArgs.Successful = false;
-        ErrorManager.SetDisabledError(eventArgs);
-        return;
-      }
-
       if (eventArgs.TargetEntityAgentId == null) {
         eventArgs.Successful = false;
         ErrorManager.SetMustTargetEntityError(eventArgs);
@@ -98,21 +80,15 @@ namespace DoffAndDonAgain.Server {
         return;
       }
 
-      if (CanDoffArmorToEntities) {
+      //if (CanDoffArmorToEntities) {
         DoffArmorToEntity(eventArgs, targetEntity);
-      }
-      if (CanDoffClothingToEntities) {
+      //}
+      //if (CanDoffClothingToEntities) {
         DoffClothingToEntity(eventArgs, targetEntity);
-      }
+      //}
     }
 
     protected void TryDonFromEntity(DoffAndDonEventArgs eventArgs) {
-      if (!IsDonFromEntitiesEnabled) {
-        eventArgs.Successful = false;
-        ErrorManager.SetDisabledError(eventArgs);
-        return;
-      }
-
       if (eventArgs.TargetEntityAgentId == null) {
         eventArgs.Successful = false;
         ErrorManager.SetMustTargetEntityError(eventArgs);
@@ -126,24 +102,18 @@ namespace DoffAndDonAgain.Server {
         return;
       }
 
-      if (CanDonArmorFromEntities) {
+      //if (CanDonArmorFromEntities) {
         DonArmorFromEntity(eventArgs, targetEntity);
-      }
-      if (CanDonClothingFromEntities) {
+      //}
+      //if (CanDonClothingFromEntities) {
         DonClothingFromEntity(eventArgs, targetEntity);
-      }
-      if (CanDonMiscFromEntities) {
+      //}
+      //if (CanDonMiscFromEntities) {
         DonMiscFromEntity(eventArgs, targetEntity);
-      }
+      //}
     }
 
     protected void TryToSwapWithEntity(DoffAndDonEventArgs eventArgs) {
-      if (!IsSwapWithEntitiesEnabled) {
-        eventArgs.Successful = false;
-        ErrorManager.SetDisabledError(eventArgs);
-        return;
-      }
-
       if (eventArgs.TargetEntityAgentId == null) {
         eventArgs.Successful = false;
         ErrorManager.SetMustTargetEntityError(eventArgs);
@@ -157,12 +127,12 @@ namespace DoffAndDonAgain.Server {
         return;
       }
 
-      if (CanSwapArmorWithEntities) {
+      //if (CanSwapArmorWithEntities) {
         SwapArmorWithEntity(eventArgs, targetEntity);
-      }
-      if (CanSwapClothingWithEntities) {
+      //}
+      //if (CanSwapClothingWithEntities) {
         SwapClothingWithEntity(eventArgs, targetEntity);
-      }
+      //}
     }
 
     protected void DoffArmorToGround(DoffAndDonEventArgs eventArgs) {
