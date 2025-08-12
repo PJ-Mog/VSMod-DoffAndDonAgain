@@ -44,10 +44,7 @@ namespace DoffAndDonAgain.Build {
         WorldConfig.SwapClothingWithEntities,
 
         //WorldConfig.MannequinSpacer,
-        WorldConfig.AllowMannequinArmor,
-        WorldConfig.AllowMannequinClothing,
-        WorldConfig.AllowMannequinHands,
-        WorldConfig.AllowMannequinBackpack
+        WorldConfig.AllowMannequins
       ];
     }
   }

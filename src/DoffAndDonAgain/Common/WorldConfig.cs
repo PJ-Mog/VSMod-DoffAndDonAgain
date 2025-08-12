@@ -29,32 +29,11 @@ namespace DoffAndDonAgain.Common {
     };
 
     // MANNEQUINS
-    public static readonly WorldConfigurationAttribute AllowMannequinArmor = new() {
+    public static readonly WorldConfigurationAttribute AllowMannequins = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(AllowMannequinArmor),
-      Default = false.ToString()
-    };
-
-    public static readonly WorldConfigurationAttribute AllowMannequinClothing = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(AllowMannequinClothing),
+      Code = Constants.MOD_ID + nameof(AllowMannequins),
       Default = true.ToString()
-    };
-
-    public static readonly WorldConfigurationAttribute AllowMannequinHands = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(AllowMannequinHands),
-      Default = false.ToString()
-    };
-
-    public static readonly WorldConfigurationAttribute AllowMannequinBackpack = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(AllowMannequinBackpack),
-      Default = false.ToString()
     };
 
     // DOFF

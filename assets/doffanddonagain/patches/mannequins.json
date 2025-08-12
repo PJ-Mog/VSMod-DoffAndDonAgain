@@ -14,67 +14,52 @@
     "value": {
       "code": "doffanddonnable",
       "targetWearableInventoryBehaviorCode": "mannequininventory",
-      "armorSlotIds": [ ],
-      "clothingSlotIds": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-      "miscDonFromSlotIds": [ ]
+      "armorSlotIds": [ 12, 13, 14 ],
+      "clothingSlotIds": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ],
+      "miscDonFromSlotIds": [ 16, 15, 17 ]
     },
     "file": "mannequins:entities/land/mannequin-stand.json",
     "dependsOn": [
       { "modid": "mannequins" }
     ]
   },
-
-
-  {
-    "op": "addeach",
-    "path": "/doffanddonTEMP/armorSlotIds/-",
-    "value": [ 12, 13, 14 ],
-    "file": "mannequins:entities/land/mannequin-stand.json",
-    "dependsOn": [
-      { "modid": "mannequins" }
-    ],
-    "condition": {
-      "when": "doffanddonagainAllowMannequinArmor",
-      "isValue": "true"
-    }
-  },
   {
     "op": "replace",
-    "path": "/doffanddonTEMP/clothingSlotIds/-",
-    "value": [ ],
+    "path": "/doffanddonTEMP/armorSlotIds",
+    "value": [],
     "file": "mannequins:entities/land/mannequin-stand.json",
     "dependsOn": [
       { "modid": "mannequins" }
     ],
     "condition": {
-      "when": "doffanddonagainAllowMannequinClothing",
+      "when": "doffanddonagainAllowMannequins",
       "isValue": "false"
     }
   },
   {
-    "op": "addeach",
-    "path": "/doffanddonTEMP/miscDonFromSlotIds/-",
-    "value": [ 16, 15 ],
+    "op": "replace",
+    "path": "/doffanddonTEMP/clothingSlotIds",
+    "value": [],
     "file": "mannequins:entities/land/mannequin-stand.json",
     "dependsOn": [
       { "modid": "mannequins" }
     ],
     "condition": {
-      "when": "doffanddonagainAllowMannequinHands",
-      "isValue": "true"
+      "when": "doffanddonagainAllowMannequins",
+      "isValue": "false"
     }
   },
   {
-    "op": "addeach",
-    "path": "/doffanddonTEMP/miscDonFromSlotIds/-",
-    "value": [ 17 ],
+    "op": "replace",
+    "path": "/doffanddonTEMP/miscDonFromSlotIds",
+    "value": [],
     "file": "mannequins:entities/land/mannequin-stand.json",
     "dependsOn": [
       { "modid": "mannequins" }
     ],
     "condition": {
-      "when": "doffanddonagainAllowMannequinBackpack",
-      "isValue": "true"
+      "when": "doffanddonagainAllowMannequins",
+      "isValue": "false"
     }
   },
 

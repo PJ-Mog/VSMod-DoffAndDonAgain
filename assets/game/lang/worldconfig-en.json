@@ -6,7 +6,6 @@
   "worldattribute-doffanddonagainHandsNeeded-unit": "{0} empty hand(s)",
 
   "worldattribute-doffanddonagainDoffSpacer": "--- Doff Settings ---",
-  "worldconfig-doffanddonagainDoffSpacer-Spacer": "---",
   "worldattribute-doffanddonagainDoffSpacer-desc": "Doesn't do anything. Taking up space to visually group the settings.'",
   "worldattribute-doffanddonagainDoffArmorToGround": "Allow Doffing armor to the ground",
   "worldattribute-doffanddonagainDoffArmorToGround-desc": "On: Doff can drop a player's equipped armor onto the ground.\r\n\nOff: Players will not be able to drop equipped armor to the ground.",
@@ -22,7 +21,6 @@
   "worldattribute-doffanddonagainDropUnplaceableClothing-desc": "On: When Doffing to an entity, any clothing that cannot be placed on the entity can be dropped to the ground.\r\n\nOff: Clothing that cannot be placed on the targeted entity will remain equipped to the player.",
 
   "worldattribute-doffanddonagainDonSpacer": "--- Don Settings ---",
-  "worldconfig-doffanddonagainDonSpacer-Spacer": "---",
   "worldattribute-doffanddonagainDonSpacer-desc": "Doesn't do anything. Taking up space to visually group the settings.'",
   "worldattribute-doffanddonagainDonArmorFromEntities": "Allow Donning armor from entities",
   "worldattribute-doffanddonagainDonArmorFromEntities-desc": "On: Don can take armor from a targeted entity and equip it to the player.\r\n\nOff: Players will not be able to equip armor from entities.",
@@ -32,22 +30,12 @@
   "worldattribute-doffanddonagainDonMiscFromEntities-desc": "On: Don can take misc. items from a targeted entity and give them to the player.\r\n\nOff: Players will not be able to take misc. items from entities.",
 
   "worldattribute-doffanddonagainSwapSpacer": "--- Swap Settings ---",
-  "worldconfig-doffanddonagainSwapSpacer-Spacer": "---",
-  "worldattribute-doffanddonagainSwapSpacer-desc": "Doesn't do anything. Taking up space to visually group the settings.'",
   "worldattribute-doffanddonagainSwapArmorWithEntities": "Allow swapping armor with entities",
   "worldattribute-doffanddonagainSwapArmorWithEntities-desc": "On: Swap can exchange armor between a player and a targeted entity.\r\n\nOff: Players will not be able to swap armor with entities.",
   "worldattribute-doffanddonagainSwapClothingWithEntities": "Allow swapping clothing with entities",
   "worldattribute-doffanddonagainSwapClothingWithEntities-desc": "On: Swap can exchange clothing between a player and a targeted entity.\r\n\nOff: Players will not be able to swap clothing with entities.",
 
   "worldattribute-doffanddonagainMannequinSpacer": "--- Mannequin Settings ---",
-  "worldconfig-doffanddonagainMannequinSpacer-Spacer": "---",
-  "worldattribute-doffanddonagainMannequinSpacer-desc": "Doesn't do anything. Taking up space to visually group the settings.'",
-  "worldattribute-doffanddonagainAllowMannequinArmor": "Interact with armor on Mannequins",
-  "worldattribute-doffanddonagainAllowMannequinArmor-desc": "On: Allow interaction with the armor placed on Mannequins from the \"Mannequin Stand\" mod.\r\n\nOff: Doff and Don Again actions will ignore armor on Mannequins.",
-  "worldattribute-doffanddonagainAllowMannequinClothing": "Interact with clothing on Mannequins",
-  "worldattribute-doffanddonagainAllowMannequinClothing-desc": "On: Allow interaction with the clothing placed on Mannequins from the \"Mannequin Stand\" mod.\r\n\nOff: Doff and Don Again actions will ignore clothing on Mannequins.",
-  "worldattribute-doffanddonagainAllowMannequinHands": "Interact with hands of Mannequins",
-  "worldattribute-doffanddonagainAllowMannequinHands-desc": "On: Allow interaction with items placed into the hands of Mannequins from the \"Mannequin Stand\" mod.\r\n\nOff: Doff and Don Again actions will ignore items in the hands of Mannequins.",
-  "worldattribute-doffanddonagainAllowMannequinBackpack": "Interact with backpacks on Mannequins",
-  "worldattribute-doffanddonagainAllowMannequinBackpack-desc": "On: Allow interaction with backpacks placed on Mannequins from the \"Mannequin Stand\" mod.\r\n\nOff: Doff and Don Again actions will ignore backpacks on Mannequins."
+  "worldattribute-doffanddonagainAllowMannequins": "Allow interaction with Mannequins",
+  "worldattribute-doffanddonagainAllowMannequins-desc": "For mannequins from the Mannequin mod by MisterAndyDandy"
 }
