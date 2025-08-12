@@ -6,13 +6,8 @@ using Vintagestory.GameContent;
 namespace DoffAndDonAgain.Server {
   public class TransferHandler {
     protected ICoreAPI Api;
-    protected bool CanDoffArmorToGround => WorldConfig.DoffArmorToGround.AsBool(Api);
-    protected bool CanDoffClothingToGround => WorldConfig.DoffClothingToGround.AsBool(Api);
-    protected bool IsDoffToGroundEnabled => CanDoffArmorToGround || CanDoffClothingToGround;
 
-    protected bool CanDropUnplaceableArmor => WorldConfig.DropUnplaceableArmor.AsBool(Api);
-    protected bool CanDropUnplaceableClothing => WorldConfig.DropUnplaceableClothing.AsBool(Api);
-
+    protected bool IsDoffToGroundEnabled => WorldConfig.AllowDoffToGround.AsBool(Api);
     protected int HandsNeeded => WorldConfig.HandsNeeded.AsInt(Api);
     protected int SaturationRequired => System.Math.Abs(WorldConfig.SaturationCost.AsInt(Api));
 
@@ -58,12 +53,8 @@ namespace DoffAndDonAgain.Server {
         return;
       }
 
-      if (CanDoffArmorToGround) {
-        DoffArmorToGround(eventArgs);
-      }
-      if (CanDoffClothingToGround) {
-        DoffClothingToGround(eventArgs);
-      }
+      DoffArmorToGround(eventArgs);
+      DoffClothingToGround(eventArgs);
     }
 
     protected void TryDoffToEntity(DoffAndDonEventArgs eventArgs) {
@@ -157,12 +148,12 @@ namespace DoffAndDonAgain.Server {
     }
 
     protected void DoffArmorToEntity(DoffAndDonEventArgs eventArgs, EntityAgent targetEntity) {
-      bool dropUnplaceable = CanDropUnplaceableArmor && eventArgs.DropUnplaceableArmor;
+      bool dropUnplaceable = IsDoffToGroundEnabled && eventArgs.DropUnplaceableArmor;
       Transfer(eventArgs, eventArgs.ForPlayer.GetArmorSlots(eventArgs.ClientArmorSlotIds), targetEntity.GetArmorSlots(), dropUnplaceableToGround: dropUnplaceable);
     }
 
     protected void DoffClothingToEntity(DoffAndDonEventArgs eventArgs, EntityAgent targetEntity) {
-      bool dropUnplaceable = CanDropUnplaceableClothing && eventArgs.DropUnplaceableClothing;
+      bool dropUnplaceable = IsDoffToGroundEnabled && eventArgs.DropUnplaceableClothing;
       Transfer(eventArgs, eventArgs.ForPlayer.GetClothingSlots(eventArgs.ClientClothingSlotIds), targetEntity.GetClothingSlots(), dropUnplaceableToGround: dropUnplaceable);
     }
 

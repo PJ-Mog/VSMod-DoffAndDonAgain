@@ -37,32 +37,11 @@ namespace DoffAndDonAgain.Common {
     };
 
     // DOFF
-    public static readonly WorldConfigurationAttribute DoffArmorToGround = new() {
+    public static readonly WorldConfigurationAttribute AllowDoffToGround = new() {
       DataType = EnumDataType.Bool,
       Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(DoffArmorToGround),
+      Code = Constants.MOD_ID + nameof(AllowDoffToGround),
       Default = true.ToString()
-    };
-
-    public static readonly WorldConfigurationAttribute DropUnplaceableArmor = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(DropUnplaceableArmor),
-      Default = false.ToString()
-    };
-
-    public static readonly WorldConfigurationAttribute DoffClothingToGround = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(DoffClothingToGround),
-      Default = false.ToString()
-    };
-
-    public static readonly WorldConfigurationAttribute DropUnplaceableClothing = new() {
-      DataType = EnumDataType.Bool,
-      Category = WorldConfigCategory,
-      Code = Constants.MOD_ID + nameof(DropUnplaceableClothing),
-      Default = false.ToString()
     };
   }
 

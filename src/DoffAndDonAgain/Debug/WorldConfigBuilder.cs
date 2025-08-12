@@ -27,10 +27,7 @@ namespace DoffAndDonAgain.Build {
         WorldConfig.HandsNeeded,
 
         //WorldConfig.DoffSpacer,
-        WorldConfig.DoffArmorToGround,
-        WorldConfig.DropUnplaceableArmor,
-        WorldConfig.DoffClothingToGround,
-        WorldConfig.DropUnplaceableClothing,
+        WorldConfig.AllowDoffToGround,
 
         //WorldConfig.MannequinSpacer,
         WorldConfig.AllowMannequins

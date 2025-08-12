@@ -6,15 +6,8 @@
   "worldattribute-doffanddonagainHandsNeeded-unit": "{0} empty hand(s)",
 
   "worldattribute-doffanddonagainDoffSpacer": "--- Doff Settings ---",
-  "worldattribute-doffanddonagainDoffSpacer-desc": "Doesn't do anything. Taking up space to visually group the settings.'",
-  "worldattribute-doffanddonagainDoffArmorToGround": "Allow Doffing armor to the ground",
-  "worldattribute-doffanddonagainDoffArmorToGround-desc": "On: Doff can drop a player's equipped armor onto the ground.\r\n\nOff: Players will not be able to drop equipped armor to the ground.",
-  "worldattribute-doffanddonagainDropUnplaceableArmor": "Drop unplaceable armor to the ground",
-  "worldattribute-doffanddonagainDropUnplaceableArmor-desc": "On: When Doffing to an entity, any armor that cannot be placed on the entity can be dropped to the ground.\r\n\nOff: Armor that cannot be placed on the targeted entity will remain equipped to the player.",
-  "worldattribute-doffanddonagainDoffClothingToGround": "Allow Doffing clothing to the ground",
-  "worldattribute-doffanddonagainDoffClothingToGround-desc": "On: Doff can drop a player's equipped clothing onto the ground.\r\n\nOff: Players will not be able to drop equipped clothing to the ground.",
-  "worldattribute-doffanddonagainDropUnplaceableClothing": "Drop unplaceable clothing to the ground",
-  "worldattribute-doffanddonagainDropUnplaceableClothing-desc": "On: When Doffing to an entity, any clothing that cannot be placed on the entity can be dropped to the ground.\r\n\nOff: Clothing that cannot be placed on the targeted entity will remain equipped to the player.",
+  "worldattribute-doffanddonagainAllowDoffToGround": "Allow Doffing to the ground",
+  "worldattribute-doffanddonagainAllowDoffToGround-desc": "On: Based on a player's chosen settings, equipped items may be thrown to the ground when using Doff.\r\n\nOff: Regardless of a player's chosen settings, Doff will never throw items onto the ground.",
 
   "worldattribute-doffanddonagainMannequinSpacer": "--- Mannequin Settings ---",
   "worldattribute-doffanddonagainAllowMannequins": "Allow interaction with Mannequins",

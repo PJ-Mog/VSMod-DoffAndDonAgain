@@ -70,8 +70,8 @@ namespace DoffAndDonAgain.Client {
         SaturationCost = clientSettings.SaturationCost.Value;
       }
 
-      ShouldDoffArmorToGround = WorldConfig.DoffArmorToGround.AsBool(api) && clientSettings.DoffArmorToGround.Value;
-      ShouldDoffClothingToGround = WorldConfig.DoffClothingToGround.AsBool(api) && clientSettings.DoffClothingToGround.Value;
+      ShouldDoffArmorToGround = WorldConfig.AllowDoffToGround.AsBool(api) && clientSettings.DoffArmorToGround.Value;
+      ShouldDoffClothingToGround = WorldConfig.AllowDoffToGround.AsBool(api) && clientSettings.DoffClothingToGround.Value;
       IsDoffToGroundEnabled = ShouldDoffArmorToGround || ShouldDoffClothingToGround;
 
       ShouldDoffArmorToEntities = clientSettings.DoffArmorToEntities.Value;
